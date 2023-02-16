@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    {% for news_i in news %}
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div>
+                <div class="card-body">
+                    <h5 class="card-title"> {{news_i.headline}} </h5>
+                    <p class="card-text"> {{ news_i.body }} </p>
+                    <p class="card-text">
+                        <small class="text-muted"> {{news_i.date}} </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
